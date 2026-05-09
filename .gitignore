@@ -1,15 +1,15 @@
-```python
+```
 # Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.py~
-
-# Dependencies
-.venv/
-venv/
+.Python
 env/
+venv/
+.venv/
+.ENV
+.ENV.local
 .env
 .env.local
 .env.*
@@ -19,16 +19,29 @@ build/
 dist/
 *.egg-info/
 
-# Testing
-.coverage
-htmlcov/
-.pytest_cache/
-.mypy_cache/
+# Dependencies
+requirements.txt.bak
 
 # Logs
 *.log
 
-# OS generated files
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# OS
 .DS_Store
 Thumbs.db
+
+# Coverage
+.coverage
+coverage/
+htmlcov/
+
+# Testing
+.pytest_cache/
+.mypy_cache/
 ```
