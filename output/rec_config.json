@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0",
+  "created_at": "2024-01-15T10:00:00Z",
+  "domain": "ecommerce",
+  "trusted_mappings": {
+    "users": {
+      "user_id": {"source_column": "customer_id", "source_table": "customers", "dtype": "int64"},
+      "email": {"source_column": "email_address", "source_table": "customers", "dtype": "string"},
+      "registration_date": {"source_column": "signup_date", "source_table": "customers", "dtype": "datetime64[ns]"},
+      "country": {"source_column": "country_code", "source_table": "customers", "dtype": "string"},
+      "age": {"source_column": "customer_age", "source_table": "customers", "dtype": "int64"},
+      "gender": {"source_column": "gender_flag", "source_table": "customers", "dtype": "string"}
+    },
+    "items": {
+      "item_id": {"source_column": "product_id", "source_table": "products", "dtype": "int64"},
+      "item_name": {"source_column": "product_name", "source_table": "products", "dtype": "string"},
+      "category_id": {"source_column": "cat_id", "source_table": "products", "dtype": "int64"},
+      "price": {"source_column": "unit_price", "source_table": "products", "dtype": "float64"},
+      "cost": {"source_column": "unit_cost", "source_table": "products", "dtype": "float64"},
+      "brand": {"source_column": "brand_name", "source_table": "products", "dtype": "string"},
+      "stock_quantity": {"source_column": "inventory_count", "source_table": "products", "dtype": "int64"}
+    },
+    "transactions": {
+      "transaction_id": {"source_column": "order_id", "source_table": "orders", "dtype": "int64"},
+      "user_id": {"source_column": "cust_id", "source_table": "orders", "dtype": "int64"},
+      "item_id": {"source_column": "prod_id", "source_table": "order_items", "dtype": "int64"},
+      "timestamp": {"source_column": "order_timestamp", "source_table": "orders", "dtype": "datetime64[ns]"},
+      "quantity": {"source_column": "qty", "source_table": "order_items", "dtype": "int64"},
+      "unit_price": {"source_column": "sale_price", "source_table": "order_items", "dtype": "float64"},
+      "discount": {"source_column": "discount_amount", "source_table": "order_items", "dtype": "float64"},
+      "total_amount": {"source_column": "line_total", "source_table": "order_items", "dtype": "float64"}
+    },
+    "interactions": {
+      "interaction_id": {"source_column": "event_id", "source_table": "events", "dtype": "int64"},
+      "user_id": {"source_column": "user_identifier", "source_table": "events", "dtype": "int64"},
+      "item_id": {"source_column": "product_identifier", "source_table": "events", "dtype": "int64"},
+      "timestamp": {"source_column": "event_time", "source_table": "events", "dtype": "datetime64[ns]"},
+      "interaction_type": {"source_column": "event_type", "source_table": "events", "dtype": "string"},
+      "session_id": {"source_column": "session_token", "source_table": "events", "dtype": "string"},
+      "device_type": {"source_column": "device_category", "source_table": "events", "dtype": "string"}
+    },
+    "categories": {
+      "category_id": {"source_column": "category_id", "source_table": "categories", "dtype": "int64"},
+      "category_name": {"source_column": "category_label", "source_table": "categories", "dtype": "string"},
+      "parent_category_id": {"source_column": "parent_cat_id", "source_table": "categories", "dtype": "int64"},
+      "level": {"source_column": "hierarchy_level", "source_table": "categories", "dtype": "int64"}
+    }
+  },
+  "business_meanings": {
+    "net_sales": {"formula": "total_amount - discount", "description": "Net revenue after discounts"},
+    "profit_margin": {"formula": "(unit_price - cost) / unit_price", "description": "Profit margin percentage"},
+    "customer_lifetime_value": {"formula": "SUM(total_amount) OVER (PARTITION BY user_id)", "description": "Total customer value"},
+    "discount_rate": {"formula": "discount / total_amount", "description": "Discount as percentage of total"}
+  },
+  "metric_definitions": {
+    "revenue": {"aggregation": "sum", "column": "total_amount"},
+    "orders": {"aggregation": "count", "column": "transaction_id"},
+    "avg_order_value": {"aggregation": "mean", "column": "total_amount"},
+    "conversion_rate": {"aggregation": "ratio", "numerator": "transactions", "denominator": "interactions"}
+  },
+  "canonical_roles": {
+    "primary_key": ["user_id", "item_id", "transaction_id", "interaction_id", "category_id"],
+    "foreign_keys": {
+      "transactions.user_id": "users.user_id",
+      "transactions.item_id": "items.item_id",
+      "interactions.user_id": "users.user_id",
+      "interactions.item_id": "items.item_id",
+      "items.category_id": "categories.category_id"
+    },
+    "timestamps": ["transactions.timestamp", "interactions.timestamp", "users.registration_date"]
+  },
+  "validation_rules": {
+    "required_fields": ["user_id", "item_id", "timestamp", "total_amount"],
+    "positive_values": ["quantity", "unit_price", "total_amount"],
+    "valid_ranges": {
+      "discount": [0, 1],
+      "quantity": [1, 1000]
+    }
+  }
+}
