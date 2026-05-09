@@ -9,13 +9,13 @@ Complete recommendation system with:
 """
 
 from .model_registry import ModelRegistry
-from .trainer import ModelTrainer
+from .trainer import RecommendationTrainer
 from .inference import RecommendationInference
 from .recommendation_manager import RecommendationManager
 
 __all__ = [
     'ModelRegistry',
-    'ModelTrainer', 
+    'RecommendationTrainer', 
     'RecommendationInference',
     'RecommendationManager',
 ]
