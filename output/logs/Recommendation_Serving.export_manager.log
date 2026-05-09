@@ -1,0 +1,24 @@
+2026-05-09 12:53:43 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/workspace/output/recommendations
+2026-05-09 12:53:43 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/workspace/output/recommendations
+2026-05-09 12:53:43 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/tmp/tmpvnpfygaz
+2026-05-09 12:53:43 - Recommendation_Serving.export_manager - INFO - Exported CSV for user 123 to /tmp/tmpvnpfygaz/user_123_20260509_125343.csv
+2026-05-09 12:53:43 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/tmp/tmpre1u6di2
+2026-05-09 12:53:43 - Recommendation_Serving.export_manager - INFO - Exported JSON for user 123 to /tmp/tmpre1u6di2/user_123_20260509_125343.json
+2026-05-09 12:53:43 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/tmp/tmpc3kz_p4u
+2026-05-09 12:53:43 - Recommendation_Serving.export_manager - INFO - Exported JSON for user 123 to /tmp/tmpc3kz_p4u/user_123_20260509_125343.json
+2026-05-09 12:53:51 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/workspace/output/recommendations
+2026-05-09 12:53:51 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/workspace/output/recommendations
+2026-05-09 12:53:51 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/tmp/tmpsslgb8dk
+2026-05-09 12:53:51 - Recommendation_Serving.export_manager - INFO - Exported CSV for user 123 to /tmp/tmpsslgb8dk/user_123_20260509_125351.csv
+2026-05-09 12:53:51 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/tmp/tmpgd0oax9j
+2026-05-09 12:53:51 - Recommendation_Serving.export_manager - INFO - Exported JSON for user 123 to /tmp/tmpgd0oax9j/user_123_20260509_125351.json
+2026-05-09 12:53:51 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/tmp/tmptx1xwo6x
+2026-05-09 12:53:51 - Recommendation_Serving.export_manager - INFO - Exported JSON for user 123 to /tmp/tmptx1xwo6x/user_123_20260509_125351.json
+2026-05-09 13:40:00 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/tmp/tmp5k0mqd8v
+2026-05-09 13:40:00 - Recommendation_Serving.export_manager - INFO - Exported CSV for user 123 to /tmp/tmp5k0mqd8v/user_123_20260509_134000.csv
+2026-05-09 13:40:00 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/tmp/tmpxxhh7nli
+2026-05-09 13:40:00 - Recommendation_Serving.export_manager - INFO - Exported JSON for user 123 to /tmp/tmpxxhh7nli/user_123_20260509_134000.json
+2026-05-09 13:40:00 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/tmp/tmpnhwj2w5s
+2026-05-09 13:40:00 - Recommendation_Serving.export_manager - INFO - Exported JSON for user 123 to /tmp/tmpnhwj2w5s/user_123_20260509_134000.json
+2026-05-09 13:40:00 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/workspace/output/recommendations
+2026-05-09 13:40:00 - Recommendation_Serving.export_manager - INFO - ExportManager initialized with output_dir=/workspace/output/recommendations
