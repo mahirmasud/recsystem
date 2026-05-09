@@ -1,4 +1,8 @@
 ```
+# Logs
+*.log
+output/logs/
+
 # Python
 __pycache__/
 *.pyc
@@ -8,17 +12,28 @@ __pycache__/
 env/
 venv/
 .venv/
+.venv-*/
 pip-log.txt
 pip-delete-this-directory.txt
-.pytest_cache/
-.mypy_cache/
+.tox/
 .coverage
-htmlcov/
-
-# Generated/compiled files
-build/
-dist/
-*.egg
-*.egg-info/
-.dSYM/
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+.MF
+tags
+TAGS
+.idlerc/
+.python-version
+ipynb_checkpoints/
+__pycache__/
+*.mo
+*.pot
 ```
