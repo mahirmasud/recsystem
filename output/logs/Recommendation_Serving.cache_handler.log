@@ -1,0 +1,15 @@
+2026-05-09 12:53:43 - Recommendation_Serving.cache_handler - INFO - CacheHandler initialized with TTL=60s, max_entries=100
+2026-05-09 12:53:43 - Recommendation_Serving.cache_handler - INFO - CacheHandler initialized with TTL=60s, max_entries=100
+2026-05-09 12:53:43 - Recommendation_Serving.cache_handler - INFO - CacheHandler initialized with TTL=60s, max_entries=100
+2026-05-09 12:53:43 - Recommendation_Serving.cache_handler - INFO - Invalidated 1 cache entries
+2026-05-09 12:53:43 - Recommendation_Serving.cache_handler - INFO - CacheHandler initialized with TTL=60s, max_entries=100
+2026-05-09 12:53:51 - Recommendation_Serving.cache_handler - INFO - CacheHandler initialized with TTL=60s, max_entries=100
+2026-05-09 12:53:51 - Recommendation_Serving.cache_handler - INFO - CacheHandler initialized with TTL=60s, max_entries=100
+2026-05-09 12:53:51 - Recommendation_Serving.cache_handler - INFO - CacheHandler initialized with TTL=60s, max_entries=100
+2026-05-09 12:53:51 - Recommendation_Serving.cache_handler - INFO - Invalidated 1 cache entries
+2026-05-09 12:53:51 - Recommendation_Serving.cache_handler - INFO - CacheHandler initialized with TTL=60s, max_entries=100
+2026-05-09 13:40:00 - Recommendation_Serving.cache_handler - INFO - CacheHandler initialized with TTL=60s, max_entries=100
+2026-05-09 13:40:00 - Recommendation_Serving.cache_handler - INFO - CacheHandler initialized with TTL=60s, max_entries=100
+2026-05-09 13:40:00 - Recommendation_Serving.cache_handler - INFO - CacheHandler initialized with TTL=60s, max_entries=100
+2026-05-09 13:40:00 - Recommendation_Serving.cache_handler - INFO - Invalidated 1 cache entries
+2026-05-09 13:40:00 - Recommendation_Serving.cache_handler - INFO - CacheHandler initialized with TTL=60s, max_entries=100

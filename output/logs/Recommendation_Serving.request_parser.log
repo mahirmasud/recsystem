@@ -1,0 +1,21 @@
+2026-05-09 12:53:43 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 12:53:43 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 12:53:43 - Recommendation_Serving.request_parser - INFO - Parsed item request for item_id=456, n=5
+2026-05-09 12:53:43 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 12:53:43 - Recommendation_Serving.request_parser - INFO - Parsed user request for user_id=123, n=10
+2026-05-09 12:53:43 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 12:53:43 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 12:53:51 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 12:53:51 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 12:53:51 - Recommendation_Serving.request_parser - INFO - Parsed item request for item_id=456, n=5
+2026-05-09 12:53:51 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 12:53:51 - Recommendation_Serving.request_parser - INFO - Parsed user request for user_id=123, n=10
+2026-05-09 12:53:51 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 12:53:51 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 13:40:00 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 13:40:00 - Recommendation_Serving.request_parser - INFO - Parsed item request for item_id=456, n=5
+2026-05-09 13:40:00 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 13:40:00 - Recommendation_Serving.request_parser - INFO - Parsed user request for user_id=123, n=10
+2026-05-09 13:40:00 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 13:40:00 - Recommendation_Serving.request_parser - INFO - RequestParser initialized
+2026-05-09 13:40:00 - Recommendation_Serving.request_parser - INFO - RequestParser initialized

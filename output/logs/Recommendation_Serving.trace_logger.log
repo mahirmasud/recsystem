@@ -1,0 +1,7 @@
+2026-05-09 12:53:43 - Recommendation_Serving.trace_logger - INFO - TraceLogger initialized (enabled=False, persist=True)
+2026-05-09 12:53:51 - Recommendation_Serving.trace_logger - INFO - TraceLogger initialized (enabled=False, persist=True)
+2026-05-09 12:53:51 - Recommendation_Serving.trace_logger - INFO - TraceLogger initialized (enabled=True, persist=False)
+2026-05-09 12:53:51 - Recommendation_Serving.trace_logger - INFO - TraceLogger initialized (enabled=True, persist=False)
+2026-05-09 13:40:00 - Recommendation_Serving.trace_logger - INFO - TraceLogger initialized (enabled=True, persist=False)
+2026-05-09 13:40:00 - Recommendation_Serving.trace_logger - INFO - TraceLogger initialized (enabled=True, persist=False)
+2026-05-09 13:40:00 - Recommendation_Serving.trace_logger - INFO - TraceLogger initialized (enabled=False, persist=True)
