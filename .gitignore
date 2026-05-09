@@ -1,8 +1,4 @@
 ```
-# Logs
-*.log
-output/logs/
-
 # Python
 __pycache__/
 *.pyc
@@ -12,23 +8,17 @@ __pycache__/
 env/
 venv/
 .venv/
-.venv*/
 pip-log.txt
 pip-delete-this-directory.txt
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.log
-.git/
-.hg/
-.svn/
-.wafpickle-*
 .pytest_cache/
 .mypy_cache/
-.DS_Store
-Thumbs.db
+.coverage
+htmlcov/
+
+# Generated/compiled files
+build/
+dist/
+*.egg
+*.egg-info/
+.dSYM/
 ```
