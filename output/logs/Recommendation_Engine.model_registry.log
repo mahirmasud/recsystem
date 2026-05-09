@@ -1,0 +1,9 @@
+2026-05-09 09:26:22 - Recommendation_Engine.model_registry - INFO - Registered model sklearn_20260509_092622 at /tmp/tmpgod6om53/models/sklearn/sklearn_20260509_092622.pkl
+2026-05-09 09:26:22 - Recommendation_Engine.model_registry - INFO - Saved item embeddings ((100, 64)) to /tmp/tmp01fxqd0j/models/embeddings/item_embeddings_20260509_092622.parquet
+2026-05-09 09:26:22 - Recommendation_Engine.model_registry - INFO - Loaded item embeddings ((100, 64)) from /tmp/tmp01fxqd0j/models/embeddings/item_embeddings_20260509_092622.parquet
+2026-05-09 09:27:29 - Recommendation_Engine.model_registry - INFO - Registered model sklearn_20260509_092729 at /tmp/tmpfe_f47vo/models/sklearn/sklearn_20260509_092729.pkl
+2026-05-09 09:27:30 - Recommendation_Engine.model_registry - INFO - Saved item embeddings ((100, 64)) to /tmp/tmpahonfbuy/models/embeddings/item_embeddings_20260509_092729.parquet
+2026-05-09 09:27:30 - Recommendation_Engine.model_registry - INFO - Loaded item embeddings ((100, 64)) from /tmp/tmpahonfbuy/models/embeddings/item_embeddings_20260509_092729.parquet
+2026-05-09 09:28:17 - Recommendation_Engine.model_registry - INFO - Registered model sklearn_20260509_092817 at /tmp/tmp08l442nl/models/sklearn/sklearn_20260509_092817.pkl
+2026-05-09 09:28:17 - Recommendation_Engine.model_registry - INFO - Saved item embeddings ((100, 64)) to /tmp/tmppe36l4_c/models/embeddings/item_embeddings_20260509_092817.parquet
+2026-05-09 09:28:17 - Recommendation_Engine.model_registry - INFO - Loaded item embeddings ((100, 64)) from /tmp/tmppe36l4_c/models/embeddings/item_embeddings_20260509_092817.parquet

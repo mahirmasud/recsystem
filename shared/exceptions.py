@@ -152,3 +152,15 @@ class EvaluationError(RecommendationSystemError):
     - Invalid input formats
     """
     pass
+
+
+class RuleEngineError(RecommendationSystemError):
+    """
+    Raised when rule engine operations fail.
+    
+    Examples:
+    - Invalid rule configuration
+    - Rule loading failures
+    - Rule execution errors
+    """
+    pass
