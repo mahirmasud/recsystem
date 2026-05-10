@@ -59,17 +59,26 @@ This system implements **Modules 7-12** of an intelligent recommendation pipelin
 │   ├── reports/               # Validation & evaluation reports
 │   └── logs/                  # System logs
 │
-├── Standardized_Data_Layer/   # MODULE 7
-│   ├── canonical_schema.py    # Canonical data model definitions
-│   ├── config_reader.py       # Configuration loader
+├── Standardized_Data_Layer/   # MODULE 7 - COMPLETE
+│   ├── canonical_schema.py    # Universal canonical schema generation
+│   ├── config_reader.py       # Configuration loader from rec_config.json
 │   ├── mapping_applier.py     # Apply confirmed mappings
-│   ├── dataframe_standardizer.py
+│   ├── dataframe_standardizer.py  # DataFrame normalization pipeline
 │   ├── metric_builder.py      # Derived metrics (CLV, margins)
 │   ├── lineage_manager.py     # Track data transformations
 │   ├── null_handler.py        # Handle missing values
 │   ├── schema_validator.py    # Schema validation
 │   ├── dataset_writer.py      # Parquet export
 │   ├── sync_manager.py        # Pipeline synchronization
+│   ├── relationship_builder.py # Entity relationship standardization
+│   ├── entity_resolver.py     # Entity identity resolution
+│   ├── semantic_transformer.py # Semantic-aware transformations
+│   ├── role_mapper.py         # Canonical role assignment
+│   ├── feature_config_loader.py # Feature configuration management
+│   ├── schema_registry.py     # Schema versioning and evolution
+│   ├── transformation_registry.py # Reusable transformation rules
+│   ├── metadata_tracker.py    # Comprehensive metadata management
+│   ├── incremental_processor.py # Incremental data processing
 │   ├── run.py                 # Pipeline entry point
 │   └── test_standardization.py
 │
@@ -211,18 +220,60 @@ python cli.py status
 
 ### 1. Standardize Data (Module 7)
 
-Convert mapped client data into canonical format:
+Convert ANY structured relational dataset into canonical recommendation-ready format:
 
 ```bash
+# Full standardization pipeline
 python cli.py standardize --config output/rec_config.json
+
+# Or run Module 7 directly
+python Standardized_Data_Layer/run.py \
+  --config output/rec_config.json \
+  --output output/standardized
 ```
 
 This creates:
-- `output/standardized/users.parquet`
-- `output/standardized/items.parquet`
-- `output/standardized/transactions.parquet`
-- `output/standardized/interactions.parquet`
-- `output/standardized/categories.parquet`
+- `output/standardized/users.parquet` - Canonical user entities
+- `output/standardized/items.parquet` - Canonical item entities  
+- `output/standardized/transactions.parquet` - Transaction records
+- `output/standardized/interactions.parquet` - User-item interactions
+- `output/standardized/events.parquet` - Event logs (if applicable)
+- `output/standardized/sessions.parquet` - Session data (if applicable)
+- `output/standardized/lineage.json` - Complete transformation lineage
+- `output/standardized/schema_metadata.json` - Schema definitions
+- `output/standardized/transformation_registry.json` - Applied rules
+
+**Incremental Processing**:
+```bash
+# Process only new/changed data since last run
+python Standardized_Data_Layer/run.py \
+  --config output/rec_config.json \
+  --incremental \
+  --state-file output/sync_state.json
+```
+
+**Domain-Specific Examples**:
+
+Ecommerce:
+```bash
+python Standardized_Data_Layer/run.py \
+  --config output/rec_config.json \
+  --entities users,items,transactions,interactions,categories
+```
+
+Fintech:
+```bash
+python Standardized_Data_Layer/run.py \
+  --config output/rec_config.json \
+  --entities accounts,payments,transfers,customers
+```
+
+SaaS:
+```bash
+python Standardized_Data_Layer/run.py \
+  --config output/rec_config.json \
+  --entities tenants,subscriptions,usage_events,features
+```
 
 ### 2. Validate Data (Module 8)
 
@@ -293,16 +344,32 @@ python cli.py apply-rules \
 
 ## CLI Commands Reference
 
-| Command | Description |
-|---------|-------------|
-| `standardize` | Module 7: Convert to canonical format |
-| `validate` | Module 8: Validate datasets |
-| `generate-features` | Module 9: Generate ML features |
-| `train-model` | Module 10: Train recommendation models |
-| `recommend` | Generate recommendations for a user |
-| `batch-recommend` | Generate recommendations for multiple users |
-| `apply-rules` | Module 11: Apply business rules |
-| `status` | Show system status |
+| Command | Module | Description |
+|---------|--------|-------------|
+| `standardize` | 7 | Convert to canonical format (config-driven) |
+| `validate` | 8 | Validate datasets |
+| `generate-features` | 9 | Generate ML features |
+| `train-model` | 10 | Train recommendation models |
+| `recommend` | 10/12 | Generate recommendations for a user |
+| `batch-recommend` | 12 | Generate recommendations for multiple users |
+| `apply-rules` | 11 | Apply business rules |
+| `status` | - | Show system status |
+
+### Module 7: Standardize Command Options
+
+```bash
+python Standardized_Data_Layer/run.py [OPTIONS]
+
+Options:
+  --config PATH          Path to rec_config.json (required)
+  --output DIR           Output directory for standardized data
+  --entities LIST        Comma-separated list of entities to process
+  --incremental          Enable incremental processing mode
+  --state-file PATH      Path to sync state file for incremental mode
+  --validate             Run schema validation after standardization
+  --lineage              Generate lineage tracking files
+  --verbose              Enable verbose logging
+```
 
 ### Common Options
 
@@ -314,15 +381,61 @@ python cli.py apply-rules \
 
 ### Module 7: Standardized Data Layer
 
-**Goal**: Convert mapped client data into canonical recommendation-ready datasets.
+**Goal**: Convert ANY structured relational dataset into canonical ML-ready recommendation datasets using configuration-driven transformations.
+
+**Key Features**:
+- **Configuration-Driven**: All transformations driven by `output/rec_config.json`
+- **Domain-Agnostic**: Supports ecommerce, fintech, healthcare, edtech, SaaS, CRM, ERP, and more
+- **Dynamic Adaptation**: Handles varying entity names, column names, relationships, timestamps
+- **Semantic Intelligence**: Normalizes heterogeneous schemas to canonical forms
+- **Complete Lineage**: Tracks source-to-target mappings and transformation history
+- **Incremental Processing**: Supports delta updates and append-only ingestion
+- **Schema Evolution**: Version tracking and compatibility checking
+- **Parquet Export**: ML-ready output in `output/standardized/`
 
 **Key Components**:
-- `canonical_schema.py`: Defines canonical data models (users, items, transactions, interactions)
-- `mapping_applier.py`: Applies confirmed schema mappings from `rec_config.json`
-- `metric_builder.py`: Creates derived metrics (net_sales, profit_margin, CLV)
-- `lineage_manager.py`: Tracks transformation history for auditability
+- `canonical_schema.py`: Universal canonical schema generation for any domain
+- `config_reader.py`: Parse rec_config.json, load schema mappings and entity definitions
+- `mapping_applier.py`: Apply semantic column mappings from configuration
+- `dataframe_standardizer.py`: Normalize datatypes, timestamps, categorical values
+- `metric_builder.py`: Create derived metrics (CLV, engagement_score, interaction_strength)
+- `lineage_manager.py`: Track transformation history for auditability
+- `null_handler.py`: Handle missing values with fallback defaults
+- `schema_validator.py`: Validate canonical schema consistency
+- `dataset_writer.py`: Parquet export layer
+- `sync_manager.py`: Pipeline synchronization coordination
+- `relationship_builder.py`: Dynamic entity relationship standardization
+- `entity_resolver.py`: Entity identity resolution and deduplication
+- `semantic_transformer.py`: Semantic-aware data transformations
+- `role_mapper.py`: Dynamic canonical role assignment
+- `feature_config_loader.py`: Feature configuration management
+- `schema_registry.py`: Schema versioning and evolution tracking
+- `transformation_registry.py`: Reusable transformation rules registry
+- `metadata_tracker.py`: Comprehensive metadata and quality metrics
+- `incremental_processor.py`: Incremental data processing and delta detection
 
-**Output**: Parquet files in `output/standardized/`
+**Supported Domains**:
+- Ecommerce (users, items, transactions, categories)
+- Fintech (accounts, payments, transfers)
+- Healthcare (patients, providers, visits, procedures)
+- Edtech (students, courses, enrollments, assessments)
+- SaaS (subscriptions, tenants, usage_events)
+- CRM (contacts, leads, opportunities)
+- ERP (orders, inventory, suppliers)
+- Analytics systems (events, sessions, behaviors)
+- Any structured relational dataset
+
+**Canonical Entities Generated**:
+- users, items, interactions, transactions
+- events, sessions, accounts, products
+- subscriptions, categories, activities
+- behaviors, logs, engagements
+
+**Output**: 
+- Parquet files in `output/standardized/`
+- `lineage.json` - Complete transformation lineage
+- `schema_metadata.json` - Schema definitions and versions
+- `transformation_registry.json` - Applied transformation rules
 
 ### Module 8: Validation Layer
 
@@ -436,25 +549,43 @@ The primary configuration file is `output/rec_config.json`, which contains:
 # 1. Check system status
 python cli.py status
 
-# 2. Standardize source data
-python cli.py standardize
+# 2. Standardize source data (Module 7)
+# Full pipeline with all entities
+python cli.py standardize --config output/rec_config.json
 
-# 3. Validate standardized data
-python cli.py validate
+# Or run directly with specific options
+python Standardized_Data_Layer/run.py \
+  --config output/rec_config.json \
+  --output output/standardized \
+  --entities users,items,transactions,interactions \
+  --validate \
+  --lineage
 
-# 4. Generate features
-python cli.py generate-features
+# Incremental update (only new/changed data)
+python Standardized_Data_Layer/run.py \
+  --config output/rec_config.json \
+  --incremental \
+  --state-file output/sync_state.json
 
-# 5. Train models
+# 3. Validate standardized data (Module 8)
+python cli.py validate --config output/rec_config.json
+
+# 4. Generate features (Module 9)
+python cli.py generate-features \
+  --transactions output/standardized/transactions.parquet \
+  --interactions output/standardized/interactions.parquet \
+  --output output/features
+
+# 5. Train models (Module 10)
 python cli.py train-model --model-types xgboost,lightgbm,dlrm
 
 # 6. Get recommendations for a user
 python cli.py recommend --user 1001 --top-k 10
 
-# 7. Apply business rules
+# 7. Apply business rules (Module 11)
 python cli.py apply-rules --rules rules.yaml --input recs.json
 
-# 8. Export final recommendations
+# 8. Export final recommendations (Module 12)
 python cli.py recommend --user 1001 --output final_recs.json --format json
 ```
 
@@ -484,6 +615,13 @@ python -m pytest Recommendation_Serving/test_serving.py -v
 
 ## Architecture Decisions
 
+### Why Configuration-Driven?
+- Dynamic adaptation to any domain (ecommerce, fintech, healthcare, etc.)
+- No hardcoded schemas - all mappings from rec_config.json
+- Easy onboarding of new data sources
+- Semantic intelligence encoded in configuration
+- Reproducible transformations across environments
+
 ### Why CLI-Based?
 - Simplicity for initial deployment
 - Easy integration into existing pipelines
@@ -508,29 +646,61 @@ python -m pytest Recommendation_Serving/test_serving.py -v
 - Supports cold-start scenarios
 - Industry-standard for large-scale recommendations
 
+### Why Semantic Transformation Layer?
+- Handles heterogeneous column names (customer_id vs user_id)
+- Normalizes business semantics across domains
+- Enables cross-domain compatibility
+- Preserves transformation lineage for auditability
+
 ## Scalability Roadmap
 
 ### Current State (CLI)
 - Single-machine execution
 - File-based data exchange
 - Synchronous processing
+- Configuration-driven standardization
+- Incremental processing support
 
 ### Phase 1: Parallel Processing
 - Add multiprocessing support
 - Batch parallelization
 - Distributed feature computation
+- Parallel entity resolution
 
 ### Phase 2: Backend Integration
 - Migrate to FastAPI
 - Async recommendation serving
 - Redis caching layer
 - PostgreSQL for metadata
+- RESTful APIs for standardization
 
 ### Phase 3: Distributed Systems
 - Apache Spark for feature engineering
 - Kafka for real-time events
 - Kubernetes deployment
 - Model serving with TorchServe/Triton
+- Distributed schema registry
+
+## Data Flow
+
+```
+Source Datasets → Schema Mapping → Semantic Transformation → Canonical Schema
+     │                  │                    │                      │
+     ▼                  ▼                    ▼                      ▼
+(rec_config.json)  (mapping_applier)  (semantic_transformer)  (canonical_schema)
+                                               │
+                                               ▼
+                                    Standardized Parquet Files
+                                               │
+                     ┌─────────────────────────┼─────────────────────────┐
+                     │                         │                         │
+                     ▼                         ▼                         ▼
+              output/standardized/    lineage.json          schema_metadata.json
+              - users.parquet         (transformation      (schema versions,
+              - items.parquet          history)             entity definitions)
+              - interactions.parquet
+              - transactions.parquet
+```
 
 ## Contributing
 
@@ -539,6 +709,9 @@ python -m pytest Recommendation_Serving/test_serving.py -v
 3. Use structured logging
 4. Document public APIs with docstrings
 5. Keep CLI files as orchestrators only (no business logic)
+6. Ensure configuration-driven design (no hardcoded schemas)
+7. Support incremental processing for data-intensive operations
+8. Maintain transformation lineage for auditability
 
 ## License
 
