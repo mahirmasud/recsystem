@@ -1,45 +1,20 @@
 ```
-# Python
-__pycache__/
+# Compiled Python files
 *.pyc
-*.pyo
-*.pyd
-
-# Dependencies
-.venv/
-venv/
-env/
-.env
-.env.local
-.env.*
-requirements.txt.bak
+__pycache__/
 
 # Logs
 *.log
+output/logs/
 
-# Coverage reports
-.coverage
-htmlcov/
-.coverage.*
+# Output data files (likely generated)
+output/reports/
+output/standardized/
+output/sync_state.json
 
-# Testing
-.pytest_cache/
-.mypy_cache/
-
-# Distribution / packaging
-dist/
-build/
-*.egg-info/
-*.dist-info/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*.tmp
-
-# OS
-.DS_Store
-Thumbs.db
+# Dependencies and virtual environments
+.venv/
+venv/
+.env
+.env.local
 ```

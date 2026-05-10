@@ -1,0 +1,30 @@
+2026-05-10 14:08:58 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for users (5 rows)
+2026-05-10 14:08:58 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for users
+2026-05-10 14:08:58 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for items (5 rows)
+2026-05-10 14:08:58 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for items
+2026-05-10 14:08:58 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for transactions (5 rows)
+2026-05-10 14:08:58 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for transactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for interactions (5 rows)
+2026-05-10 14:08:58 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for interactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for categories (5 rows)
+2026-05-10 14:08:58 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for categories
+2026-05-10 14:09:03 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for users (5 rows)
+2026-05-10 14:09:03 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for users
+2026-05-10 14:09:03 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for items (5 rows)
+2026-05-10 14:09:03 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for items
+2026-05-10 14:09:03 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for transactions (5 rows)
+2026-05-10 14:09:03 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for transactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for interactions (5 rows)
+2026-05-10 14:09:03 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for interactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for categories (5 rows)
+2026-05-10 14:09:03 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for categories
+2026-05-10 14:09:32 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for users (5 rows)
+2026-05-10 14:09:32 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for users
+2026-05-10 14:09:32 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for items (5 rows)
+2026-05-10 14:09:32 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for items
+2026-05-10 14:09:32 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for transactions (5 rows)
+2026-05-10 14:09:32 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for transactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for interactions (5 rows)
+2026-05-10 14:09:32 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for interactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.dataframe_standardizer - INFO - Starting standardization for categories (5 rows)
+2026-05-10 14:09:32 - Standardized_Data_Layer.dataframe_standardizer - INFO - Completed standardization for categories

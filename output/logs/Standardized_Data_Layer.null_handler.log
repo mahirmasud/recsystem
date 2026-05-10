@@ -1,0 +1,30 @@
+2026-05-10 14:08:58 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for users using strategy: default
+2026-05-10 14:08:58 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:08:58 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for items using strategy: default
+2026-05-10 14:08:58 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:08:58 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for transactions using strategy: default
+2026-05-10 14:08:58 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:08:58 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for interactions using strategy: default
+2026-05-10 14:08:58 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:08:58 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for categories using strategy: default
+2026-05-10 14:08:58 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:09:03 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for users using strategy: default
+2026-05-10 14:09:03 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:09:03 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for items using strategy: default
+2026-05-10 14:09:03 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:09:03 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for transactions using strategy: default
+2026-05-10 14:09:03 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:09:03 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for interactions using strategy: default
+2026-05-10 14:09:03 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:09:03 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for categories using strategy: default
+2026-05-10 14:09:03 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:09:32 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for users using strategy: default
+2026-05-10 14:09:32 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:09:32 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for items using strategy: default
+2026-05-10 14:09:32 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:09:32 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for transactions using strategy: default
+2026-05-10 14:09:32 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:09:32 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for interactions using strategy: default
+2026-05-10 14:09:32 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0
+2026-05-10 14:09:32 - Standardized_Data_Layer.null_handler - INFO - Handling nulls for categories using strategy: default
+2026-05-10 14:09:32 - Standardized_Data_Layer.null_handler - INFO - Remaining nulls after handling: 0

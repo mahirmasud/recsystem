@@ -48,26 +48,107 @@ def cmd_standardize(args: argparse.Namespace) -> int:
     
     Converts mapped client data into canonical recommendation-ready datasets.
     """
-    from Standardized_Data_Layer.run import StandardizationPipeline
+    from Standardized_Data_Layer.run import StandardizationPipeline, create_sample_data
+    from shared.constants import Constants
     
     try:
+        # Ensure directories exist
+        Constants.ensure_directories()
+        
         pipeline = StandardizationPipeline(config_path=args.config)
         
-        # In production, source data paths would come from config or additional args
-        # For now, we initialize the pipeline which sets up all components
-        print("Standardization Pipeline Initialized")
-        print(f"Config: {args.config}")
-        print(f"Output directory: output/standardized/")
+        # Check if sample data requested
+        if args.sample:
+            # Generate and process sample data
+            print("Generating sample data from configuration...")
+            sample_data = create_sample_data(pipeline.config_reader)
+            
+            if not sample_data:
+                print("ERROR: Could not generate sample data. Check your rec_config.json", file=sys.stderr)
+                return 1
+            
+            print(f"Generated sample data for {len(sample_data)} entities:")
+            for entity_type, df in sample_data.items():
+                print(f"  - {entity_type}: {len(df)} rows, {len(df.columns)} columns")
+            
+            print("\nRunning standardization pipeline...")
+            results = pipeline.run(
+                sample_data,
+                validate=not args.no_validate,
+                write_output=not args.no_write
+            )
+            
+        elif args.files:
+            # Parse file arguments
+            file_paths = {}
+            for file_arg in args.files:
+                if '=' in file_arg:
+                    entity_type, filepath = file_arg.split('=', 1)
+                    file_paths[entity_type] = filepath
+                else:
+                    print(f"ERROR: Invalid file argument format: {file_arg}. Use entity_type=file_path", file=sys.stderr)
+                    return 1
+            
+            print(f"Running standardization from files: {file_paths}")
+            results = pipeline.run_from_files(
+                file_paths,
+                validate=not args.no_validate,
+                write_output=not args.no_write
+            )
+            
+        else:
+            # Interactive mode - show instructions
+            print("Standardization Pipeline Initialized")
+            print(f"Config: {args.config}")
+            print(f"Output directory: output/standardized/")
+            print("\nTo run standardization, use one of the following options:\n")
+            print("1. Process sample data (generated from config):")
+            print("   python cli.py standardize --config output/rec_config.json --sample\n")
+            print("2. Process actual data files:")
+            print("   python cli.py standardize --config output/rec_config.json --files users=data/users.csv items=data/items.csv\n")
+            print("3. Use Python API:")
+            print("   from Standardized_Data_Layer.run import StandardizationPipeline")
+            print("   pipeline = StandardizationPipeline('output/rec_config.json')")
+            print("   pipeline.run_from_files({'users': 'data/users.csv', 'items': 'data/items.csv'})\n")
+            return 0
         
-        # Note: Actual execution requires source data files
-        # This would be called as: pipeline.run_from_files(file_paths={...})
-        print("\nTo run standardization with actual data, provide source file paths.")
-        print("Example: pipeline.run_from_files({'transactions': 'path/to/data.csv'})")
+        # Print results
+        print("\n" + "="*60)
+        print("STANDARDIZATION RESULTS")
+        print("="*60)
+        print(f"Success: {results.get('success', False)}")
+        print(f"Entities processed: {len(results.get('entities_processed', []))}")
+        print(f"Duration: {results.get('duration_seconds', 0):.2f} seconds")
         
-        return 0
+        if results.get('summary'):
+            summary = results['summary']
+            print(f"Total rows: {summary.get('total_rows', 0)}")
+            print(f"Errors: {summary.get('error_count', 0)}")
+            print(f"Warnings: {summary.get('warning_count', 0)}")
+        
+        if results.get('errors'):
+            errors_list = results['errors']
+            if errors_list:
+                print("\nErrors encountered:")
+                for error in errors_list[:5]:  # Show first 5 errors
+                    print(f"  - {error}")
+        
+        if results.get('warnings'):
+            warnings_list = results['warnings']
+            if warnings_list:
+                print("\nWarnings:")
+                for warning in warnings_list[:5]:  # Show first 5 warnings
+                    print(f"  - {warning}")
+        
+        print("\nOutput files written to:", Constants.STANDARDIZED_DIR)
+        print("="*60)
+        
+        return 0 if results.get('success', False) else 1
         
     except Exception as e:
         print(f"Error during standardization: {e}", file=sys.stderr)
+        import traceback
+        traceback.print_exc()
         return 1
 
 
@@ -379,6 +460,27 @@ Examples:
         description='Convert mapped client data into canonical recommendation-ready datasets.'
     )
     add_common_arguments(std_parser)
+    std_parser.add_argument(
+        '--sample',
+        action='store_true',
+        help='Generate and process sample data from configuration'
+    )
+    std_parser.add_argument(
+        '--files',
+        type=str,
+        nargs='+',
+        help='Source data files (format: entity_type=file_path)'
+    )
+    std_parser.add_argument(
+        '--no-validate',
+        action='store_true',
+        help='Skip validation after standardization'
+    )
+    std_parser.add_argument(
+        '--no-write',
+        action='store_true',
+        help='Skip writing output files'
+    )
     std_parser.set_defaults(func=cmd_standardize)
     
     # Command: validate
