@@ -1,0 +1,90 @@
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for users
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: users
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 6 columns for users
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Selected 6 columns for users
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for users
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for users
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for items
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: items
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 7 columns for items
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Selected 7 columns for items
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for items
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for items
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for transactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: transactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 8 columns for transactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Selected 8 columns for transactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for transactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for transactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for interactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: interactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 7 columns for interactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Selected 7 columns for interactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for interactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for interactions
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for categories
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: categories
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 4 columns for categories
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Selected 4 columns for categories
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for categories
+2026-05-10 14:08:58 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for categories
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for users
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: users
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 6 columns for users
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Selected 6 columns for users
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for users
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for users
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for items
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: items
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 7 columns for items
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Selected 7 columns for items
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for items
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for items
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for transactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: transactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 8 columns for transactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Selected 8 columns for transactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for transactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for transactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for interactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: interactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 7 columns for interactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Selected 7 columns for interactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for interactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for interactions
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for categories
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: categories
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 4 columns for categories
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Selected 4 columns for categories
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for categories
+2026-05-10 14:09:03 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for categories
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for users
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: users
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 6 columns for users
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Selected 6 columns for users
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for users
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for users
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for items
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: items
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 7 columns for items
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Selected 7 columns for items
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for items
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for items
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for transactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: transactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 8 columns for transactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Selected 8 columns for transactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for transactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for transactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for interactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: interactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 7 columns for interactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Selected 7 columns for interactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for interactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for interactions
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Selecting and mapping columns for categories
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Applying mapping for entity type: categories
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Mapped 4 columns for categories
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Selected 4 columns for categories
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Adding missing optional columns for categories
+2026-05-10 14:09:32 - Standardized_Data_Layer.mapping_applier - INFO - Converting dtypes for categories

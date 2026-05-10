@@ -1,0 +1,30 @@
+2026-05-10 14:08:58 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/users.parquet (5 rows)
+2026-05-10 14:08:58 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/users.parquet
+2026-05-10 14:08:58 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/items.parquet (5 rows)
+2026-05-10 14:08:58 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/items.parquet
+2026-05-10 14:08:58 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/transactions.parquet (5 rows)
+2026-05-10 14:08:58 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/transactions.parquet
+2026-05-10 14:08:58 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/interactions.parquet (5 rows)
+2026-05-10 14:08:58 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/interactions.parquet
+2026-05-10 14:08:58 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/categories.parquet (5 rows)
+2026-05-10 14:08:58 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/categories.parquet
+2026-05-10 14:09:03 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/users.parquet (5 rows)
+2026-05-10 14:09:03 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/users.parquet
+2026-05-10 14:09:03 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/items.parquet (5 rows)
+2026-05-10 14:09:03 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/items.parquet
+2026-05-10 14:09:03 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/transactions.parquet (5 rows)
+2026-05-10 14:09:03 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/transactions.parquet
+2026-05-10 14:09:03 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/interactions.parquet (5 rows)
+2026-05-10 14:09:03 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/interactions.parquet
+2026-05-10 14:09:03 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/categories.parquet (5 rows)
+2026-05-10 14:09:03 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/categories.parquet
+2026-05-10 14:09:32 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/users.parquet (5 rows)
+2026-05-10 14:09:32 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/users.parquet
+2026-05-10 14:09:32 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/items.parquet (5 rows)
+2026-05-10 14:09:32 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/items.parquet
+2026-05-10 14:09:32 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/transactions.parquet (5 rows)
+2026-05-10 14:09:32 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/transactions.parquet
+2026-05-10 14:09:32 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/interactions.parquet (5 rows)
+2026-05-10 14:09:32 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/interactions.parquet
+2026-05-10 14:09:32 - shared.file_loader - INFO - Saving Parquet to /workspace/output/standardized/categories.parquet (5 rows)
+2026-05-10 14:09:32 - shared.file_loader - INFO - Saved Parquet to /workspace/output/standardized/categories.parquet
